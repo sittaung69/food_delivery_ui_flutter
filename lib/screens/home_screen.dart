@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery_ui_flutter/data/data.dart';
 import 'package:food_delivery_ui_flutter/models/restaurant.dart';
+import 'package:food_delivery_ui_flutter/screens/cart_screen.dart';
 import 'package:food_delivery_ui_flutter/screens/restaurant_screen.dart';
 import 'package:food_delivery_ui_flutter/widgets/rating_stars.dart';
 import 'package:food_delivery_ui_flutter/widgets/recent_orders.dart';
@@ -110,7 +111,12 @@ class _HomeScreenState extends State<HomeScreen> {
                 fontSize: 20.0,
               ),
             ),
-            onPressed: () {},
+            onPressed: () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (_) => CartScreen(),
+              ),
+            ),
           ),
         ],
       ),
